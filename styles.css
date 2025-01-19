@@ -11,16 +11,58 @@
     --primary-color: #2d3748;
     --bg-color: #f7fafc;
     --frame-padding: 2rem;
+    --accent-color: #4a5568;
 }
 
 body {
     min-height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     font-family: 'Inter', sans-serif;
     background: var(--bg-color);
     padding: var(--frame-padding);
+}
+
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    margin-right: 2rem;
+}
+
+.nav-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.linkedin-link {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.linkedin-link:hover {
+    color: #0077b5;
 }
 
 .main-frame {
@@ -109,6 +151,39 @@ h2 {
     }
 }
 
+.content-section {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content-section h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    animation: none;
+    opacity: 1;
+}
+
+.content-section p {
+    color: var(--accent-color);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.content-section ul {
+    list-style-position: inside;
+    color: var(--accent-color);
+}
+
+.content-section li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
 @media (max-width: 768px) {
     :root {
         --frame-padding: 1rem;
@@ -131,5 +206,27 @@ h2 {
     
     h1::after {
         width: 60px;
+    }
+
+    .top-nav {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        margin-right: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .content-section {
+        margin: 2rem auto;
+        padding: 1.5rem;
+    }
+
+    .content-section h2 {
+        font-size: 1.5rem;
     }
 } 
