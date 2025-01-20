@@ -104,14 +104,14 @@ body {
 .content-wrapper {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding-top: calc(var(--nav-height) + 4rem);
-    padding-bottom: 4rem;
+    padding-top: calc(var(--nav-height) + 2rem);
+    padding-bottom: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
 }
 
 .content-section {
-    margin: 4rem 0;
+    margin: 2rem 0;
 }
 
 .content-section:first-child {
@@ -122,7 +122,7 @@ body {
     width: var(--max-width);
     margin: 0 auto;
     background: var(--white);
-    padding: 2.5rem;
+    padding: 2rem;
     border-radius: 8px;
     box-shadow: var(--shadow-md);
 }
@@ -358,6 +358,30 @@ footer {
     font-size: 1rem;
 }
 
+/* Contact Button */
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-1px);
+}
+
+.contact-button i {
+    font-size: 1rem;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     :root {
@@ -391,7 +415,7 @@ footer {
 
     .section-content {
         width: 100%;
-        padding: 2rem 1.5rem;
+        padding: 1.5rem;
     }
 
     .action-buttons {
@@ -421,11 +445,12 @@ footer {
     }
 
     .content-wrapper {
-        padding: calc(var(--nav-height) + 2rem) 1rem 2rem;
+        padding-top: calc(var(--nav-height) + 1.5rem);
+        padding-bottom: 1.5rem;
     }
 
     .content-section {
-        margin: 2.5rem 0;
+        margin: 1.5rem 0;
     }
 
     .criteria-grid {
@@ -449,5 +474,14 @@ footer {
     .intro {
         font-size: 1.1rem;
         margin-bottom: 2rem;
+    }
+
+    .contact-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .contact-button i {
+        font-size: 0.9rem;
     }
 } 
