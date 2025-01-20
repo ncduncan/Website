@@ -111,7 +111,7 @@ body {
 }
 
 .content-section {
-    margin: 6rem 0;
+    margin: 4rem 0;
 }
 
 .content-section:first-child {
@@ -122,7 +122,7 @@ body {
     width: var(--max-width);
     margin: 0 auto;
     background: var(--white);
-    padding: 3rem;
+    padding: 2.5rem;
     border-radius: 8px;
     box-shadow: var(--shadow-md);
 }
@@ -300,6 +300,64 @@ footer {
     display: none;
 }
 
+/* Experience Section */
+.experience-content {
+    margin-bottom: 2rem;
+}
+
+.intro {
+    margin-bottom: 2.5rem;
+    font-size: 1.2rem;
+    max-width: 800px;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.experience-item {
+    text-align: center;
+    padding: 2rem;
+    background: var(--bg-color);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+}
+
+.experience-item i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.experience-item h3 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.experience-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.education {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.education-text {
+    font-style: italic;
+    color: var(--accent-color);
+    font-size: 1rem;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     :root {
@@ -367,7 +425,7 @@ footer {
     }
 
     .content-section {
-        margin: 3rem 0;
+        margin: 2.5rem 0;
     }
 
     .criteria-grid {
@@ -377,5 +435,19 @@ footer {
 
     .criteria-item {
         padding: 1.5rem;
+    }
+
+    .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .experience-item {
+        padding: 1.5rem;
+    }
+
+    .intro {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
     }
 } 
