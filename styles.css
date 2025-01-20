@@ -224,6 +224,11 @@ footer {
     font-size: 0.9rem;
 }
 
+/* Navigation Right */
+.nav-right {
+    margin-left: auto;
+}
+
 /* Action Buttons */
 .action-buttons {
     margin-top: 2rem;
@@ -234,7 +239,8 @@ footer {
 }
 
 .download-button,
-.linkedin-button {
+.linkedin-button,
+.contact-button {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -242,27 +248,40 @@ footer {
     color: var(--white);
     text-decoration: none;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    font-weight: 500;
 }
 
 .download-button {
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
 }
 
 .linkedin-button {
     background-color: #0077b5;
 }
 
+.contact-button {
+    background-color: var(--primary-color);
+}
+
 .download-button:hover {
-    background-color: var(--accent-color);
+    background-color: #64748b;
+    transform: translateY(-1px);
 }
 
 .linkedin-button:hover {
     background-color: #005885;
+    transform: translateY(-1px);
+}
+
+.contact-button:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-1px);
 }
 
 .download-button i,
-.linkedin-button i {
+.linkedin-button i,
+.contact-button i {
     font-size: 1.2rem;
 }
 
@@ -355,30 +374,6 @@ footer {
 .education-text {
     font-style: italic;
     color: var(--accent-color);
-    font-size: 1rem;
-}
-
-/* Contact Button */
-.contact-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.6rem 1.2rem;
-    background-color: var(--primary-color);
-    color: var(--white);
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.contact-button:hover {
-    background-color: var(--accent-color);
-    transform: translateY(-1px);
-}
-
-.contact-button i {
     font-size: 1rem;
 }
 
@@ -476,12 +471,12 @@ footer {
         margin-bottom: 2rem;
     }
 
-    .contact-button {
+    .nav-right .contact-button {
         padding: 0.5rem 1rem;
         font-size: 0.9rem;
     }
     
-    .contact-button i {
+    .nav-right .contact-button i {
         font-size: 0.9rem;
     }
 } 
