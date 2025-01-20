@@ -162,6 +162,7 @@ p {
     font-size: 1.1rem;
     color: var(--accent-color);
     line-height: 1.8;
+    max-width: 100%;
 }
 
 /* Criteria Grid */
@@ -299,6 +300,7 @@ footer {
 
 .profile-text {
     flex: 1;
+    max-width: 100%;
 }
 
 .profile-text p {
@@ -307,6 +309,7 @@ footer {
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
     line-height: 1.8;
+    max-width: 100%;
 }
 
 .profile-text p:last-child {
@@ -339,7 +342,7 @@ footer {
     margin-bottom: 2.5rem;
     font-size: 1.1rem;
     line-height: 1.8;
-    max-width: 800px;
+    max-width: 100%;
     color: var(--accent-color);
 }
 
