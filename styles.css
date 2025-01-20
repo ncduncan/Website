@@ -43,7 +43,7 @@ body {
 }
 
 .nav-content {
-    max-width: var(--max-width);
+    width: var(--max-width);
     margin: 0 auto;
     padding: 0 2rem;
     height: 100%;
@@ -101,7 +101,7 @@ body {
 
 /* Main Content */
 .content-wrapper {
-    max-width: var(--max-width);
+    width: var(--max-width);
     margin: 0 auto;
     padding-top: calc(var(--nav-height) + 2rem);
     padding-bottom: 2rem;
@@ -118,8 +118,6 @@ body {
 }
 
 .section-content {
-    width: var(--max-width);
-    margin: 0 auto;
     background: var(--white);
     padding: 2rem;
     border-radius: 8px;
@@ -226,16 +224,15 @@ footer {
 /* Navigation Right */
 .nav-right {
     margin-left: auto;
-    padding-right: calc((100vw - var(--max-width)) / 2);
 }
 
 .nav-right .contact-button {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
 }
 
 .nav-right .contact-button i {
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 /* Action Buttons */
