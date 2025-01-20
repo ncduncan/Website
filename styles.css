@@ -306,6 +306,13 @@ footer {
 .profile-text p {
     text-align: left;
     margin: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.profile-text p:last-child {
+    margin-bottom: 0;
 }
 
 .profile-image {
