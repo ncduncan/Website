@@ -119,7 +119,7 @@ body {
 }
 
 .section-content {
-    max-width: 800px;
+    width: var(--max-width);
     margin: 0 auto;
     background: var(--white);
     padding: 3rem;
@@ -224,7 +224,83 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Responsive Design */
+/* Action Buttons */
+.action-buttons {
+    margin-top: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.download-button,
+.linkedin-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.download-button {
+    background-color: var(--primary-color);
+}
+
+.linkedin-button {
+    background-color: #0077b5;
+}
+
+.download-button:hover {
+    background-color: var(--accent-color);
+}
+
+.linkedin-button:hover {
+    background-color: #005885;
+}
+
+.download-button i,
+.linkedin-button i {
+    font-size: 1.2rem;
+}
+
+/* Profile Content */
+.profile-content {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.profile-text {
+    flex: 1;
+}
+
+.profile-text p {
+    text-align: left;
+    margin: 0;
+}
+
+.profile-image {
+    flex: 0 0 300px;
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
+}
+
+/* Remove old styles */
+.linkedin-link,
+.resume-download {
+    display: none;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
     :root {
         --nav-height: 60px;
@@ -256,7 +332,34 @@ footer {
     }
 
     .section-content {
+        width: 100%;
         padding: 2rem 1.5rem;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .download-button,
+    .linkedin-button {
+        justify-content: center;
+    }
+
+    .profile-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .profile-text p {
+        text-align: center;
+    }
+
+    .profile-image {
+        order: -1;
+        flex: 0 0 auto;
+        max-width: 250px;
+        margin: 0 auto;
     }
 
     .content-wrapper {
