@@ -26,6 +26,7 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
+    background: var(--bg-color);
 }
 
 /* Navigation */
@@ -99,46 +100,31 @@ body {
     color: #0077b5;
 }
 
-/* Hero Section */
-.hero {
-    height: 100vh;
-    background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0.8),
-        rgba(255, 255, 255, 0.6)
-    ), url('woodstock.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-}
-
-.hero-content {
-    max-width: var(--max-width);
-    text-align: center;
-    padding: 3rem;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 8px;
-    box-shadow: var(--shadow-lg);
-}
-
 /* Main Content */
 .content-wrapper {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 4rem 2rem;
+    padding-top: calc(var(--nav-height) + 4rem);
+    padding-bottom: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .content-section {
     margin: 6rem 0;
 }
 
+.content-section:first-child {
+    margin-top: 0;
+}
+
 .section-content {
     max-width: 800px;
     margin: 0 auto;
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
 }
 
 /* Dividers */
@@ -157,14 +143,15 @@ h1 {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 600;
     color: var(--primary-color);
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 h3 {
@@ -180,6 +167,7 @@ p {
     text-align: center;
     max-width: 600px;
     margin: 0 auto;
+    line-height: 1.8;
 }
 
 /* Criteria Grid */
@@ -193,9 +181,9 @@ p {
 .criteria-item {
     text-align: center;
     padding: 2rem;
-    background: var(--white);
+    background: var(--bg-color);
     border-radius: 8px;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-sm);
     transition: transform 0.3s ease;
 }
 
@@ -264,19 +252,19 @@ footer {
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
-    .hero-content {
-        padding: 2rem;
+    .section-content {
+        padding: 2rem 1.5rem;
     }
 
     .content-wrapper {
-        padding: 2rem 1rem;
+        padding: calc(var(--nav-height) + 2rem) 1rem 2rem;
     }
 
     .content-section {
-        margin: 4rem 0;
+        margin: 3rem 0;
     }
 
     .criteria-grid {
